@@ -1,0 +1,19 @@
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title C&amp;C
+h3 Zombies connected
+ul
+  each zombie in zombies
+    li= zombie
+hr
+form(action='command' method='POST')
+  label(for='') Command: 
+  input(type='text', name='command')
+  button(type='submit') Send
+hr
+h4 Result
+ul
+  each result in results
+    li= result
